@@ -1,14 +1,19 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import Features from "@/components/Features";
+import HowItWorks from "@/components/HowItWorks";
+import Testimonials from "@/components/Testimonials";
 import ProjectCard from "@/components/ProjectCard";
 import ProjectModal from "@/components/ProjectModal";
 import ContactModal from "@/components/ContactModal";
 import AuthModal from "@/components/AuthModal";
 import ExplorerMenu from "@/components/ExplorerMenu";
 import ValuationTool from "@/components/ValuationTool";
-import AdPlaceholder from "@/components/AdPlaceholder";
 import PartnerLogos from "@/components/PartnerLogos";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
 import { projects, Project } from "@/data/projects";
 import { User, Menu } from "lucide-react";
 
@@ -29,122 +34,90 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Explorer Menu Link */}
-      <div className="fixed top-6 left-6 z-50">
-        <button
-          onClick={() => setIsExplorerOpen(true)}
-          className="flex items-center gap-2 text-foreground hover:text-primary transition-colors font-semibold tracking-widest text-sm"
-        >
-          <Menu className="h-5 w-5" />
-          EXPLORER
-        </button>
-      </div>
+      {/* Navigation */}
+      <Navigation 
+        onContactClick={() => setIsContactOpen(true)}
+        onAuthClick={() => setIsAuthOpen(true)}
+      />
 
-      {/* JOIN NOW Button */}
-      <div className="fixed top-6 right-6 z-50">
-        <button
-          onClick={() => setIsAuthOpen(true)}
-          className="flex items-center gap-2 px-6 py-2.5 bg-primary text-primary-foreground font-semibold tracking-widest text-sm rounded-md hover:bg-primary/90 transition-all animate-pulse-glow"
-        >
-          <User className="h-4 w-4" />
-          JOIN NOW
-        </button>
-      </div>
-
+      {/* Hero Section */}
       <Hero />
 
-      {/* Top Banner Ad */}
-      <div className="max-w-7xl mx-auto px-6 py-4">
-        <AdPlaceholder size="banner" />
-      </div>
+      {/* Features Section */}
+      <Features />
 
-      <section className="px-6 py-16 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-          {/* Main Content */}
-          <div className="lg:col-span-3">
-            <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Services & Solutions
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            Professional digital services tailored for law firms
-          </p>
-        </div>
+      {/* How It Works Section */}
+      <HowItWorks />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-          {ongoingProjects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              name={project.name}
-              description={project.description}
-              logo={project.logo}
-              link={project.link}
-              status={project.status}
-              initialViews={project.initialViews}
-              initialLikes={project.initialLikes}
-              onLearnMore={() => handleLearnMore(project)}
-            />
-          ))}
-        </div>
-
-        <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Featured Projects
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            Showcasing innovative digital solutions and partnerships
-          </p>
-        </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {upcomingProjects.map((project) => (
-                <ProjectCard
-                  key={project.id}
-                  name={project.name}
-                  description={project.description}
-                  logo={project.logo}
-                  link={project.link}
-                  status={project.status}
-                  initialViews={project.initialViews}
-                  initialLikes={project.initialLikes}
-                  onLearnMore={() => handleLearnMore(project)}
-                />
-              ))}
-            </div>
+      {/* Services & Solutions Section */}
+      <section className="px-6 py-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
+              Our Services & Solutions
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Comprehensive digital services tailored for modern law firms
+            </p>
           </div>
 
-          {/* Sidebar Ads */}
-          <div className="lg:col-span-1 space-y-6">
-            <AdPlaceholder size="sidebar" />
-            <AdPlaceholder size="square" className="mx-auto" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {ongoingProjects.map((project) => (
+              <ProjectCard
+                key={project.id}
+                name={project.name}
+                description={project.description}
+                logo={project.logo}
+                link={project.link}
+                status={project.status}
+                initialViews={project.initialViews}
+                initialLikes={project.initialLikes}
+                onLearnMore={() => handleLearnMore(project)}
+              />
+            ))}
+          </div>
+
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
+              Featured Projects
+            </h3>
+            <p className="text-muted-foreground">
+              Showcasing innovative digital solutions and partnerships
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {upcomingProjects.map((project) => (
+              <ProjectCard
+                key={project.id}
+                name={project.name}
+                description={project.description}
+                logo={project.logo}
+                link={project.link}
+                status={project.status}
+                initialViews={project.initialViews}
+                initialLikes={project.initialLikes}
+                onLearnMore={() => handleLearnMore(project)}
+              />
+            ))}
           </div>
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <Testimonials />
+
       {/* Digital Asset Valuation Tool Section */}
       <ValuationTool />
+
+      {/* CTA Section */}
+      <CTASection />
 
       {/* Partner Logos Section */}
       <PartnerLogos />
 
-      <footer className="border-t border-border py-8 px-6">
-        <div className="max-w-7xl mx-auto text-center text-muted-foreground">
-          <div className="flex justify-center gap-6 mb-4 text-sm">
-            <Link to="/terms" className="hover:text-primary transition-colors">
-              Terms of Service
-            </Link>
-            <Link to="/privacy" className="hover:text-primary transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/cookies" className="hover:text-primary transition-colors">
-              Cookie Policy
-            </Link>
-          </div>
-          <p className="text-sm tracking-wide">
-            © {new Date().getFullYear()} Monogamy - Michael Chigbu. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      {/* Footer */}
+      <Footer />
 
       <ContactModal
         isOpen={isContactOpen}
