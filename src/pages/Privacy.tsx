@@ -36,8 +36,8 @@ const Privacy = () => {
             </p>
             <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
               <li>Respond to your inquiries and fulfill your requests</li>
-              <li>Send you technical notices and support messages</li>
-              <li>Communicate with you about projects, services, and events</li>
+              <li>Provide legal digital services and consulting</li>
+              <li>Communicate with you about projects, services, and updates</li>
               <li>Improve our website and services</li>
             </ul>
           </section>

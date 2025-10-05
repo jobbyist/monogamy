@@ -25,12 +25,12 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
       <DialogContent className="sm:max-w-[450px]">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold tracking-wide">
-            {isSignUp ? "Join GRAVITAS" : "Welcome Back"}
+            {isSignUp ? "Join Monogamy" : "Welcome Back"}
           </DialogTitle>
         </DialogHeader>
         <p className="text-muted-foreground mb-4">
           {isSignUp 
-            ? "Create an account to access exclusive features and digital asset insights."
+            ? "Create an account to access exclusive legal digital services and insights."
             : "Log in to your account to continue."}
         </p>
         
