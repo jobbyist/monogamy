@@ -1,4 +1,4 @@
-import gravitasLogo from "@/assets/gravitas-logo.png";
+import monogamyLogo from "@/assets/monogamy-logo.png";
 
 const Hero = () => {
   return (
@@ -6,8 +6,8 @@ const Hero = () => {
       <div className="max-w-5xl mx-auto text-center">
         <div className="mb-8 flex justify-center">
           <img 
-            src={gravitasLogo} 
-            alt="GRAVITAS INDUSTRIES" 
+            src={monogamyLogo} 
+            alt="Monogamy - Michael Chigbu" 
             className="h-32 md:h-40 w-auto"
           />
         </div>
@@ -20,7 +20,7 @@ const Hero = () => {
         </div>
 
         <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed tracking-wide">
-          An independently owned, operated, and social benefit enterprise positioning itself as one of South Africa's top players in the rapidly evolving tech industry through strategic product development and a noteworthy digital asset portfolio.
+          Remote legal assistant and digital consultant providing law firms with Web Design, SEO, AI and Workflow Automation services. Let's transform your legal practice with cutting-edge digital solutions.
         </p>
       </div>
     </section>

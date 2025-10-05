@@ -27,21 +27,21 @@ const Terms = () => {
           <section>
             <h2 className="text-2xl font-bold mb-4 tracking-wide">2. Use License</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Permission is granted to temporarily access the materials on GRAVITAS INDUSTRIES' website for personal, non-commercial transitory viewing only.
+              Permission is granted to temporarily access the materials on Monogamy's website for personal, non-commercial transitory viewing only.
             </p>
           </section>
           
           <section>
             <h2 className="text-2xl font-bold mb-4 tracking-wide">3. Disclaimer</h2>
             <p className="text-muted-foreground leading-relaxed">
-              The materials on GRAVITAS INDUSTRIES' website are provided on an 'as is' basis. GRAVITAS INDUSTRIES makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+              The materials on Monogamy's website are provided on an 'as is' basis. Monogamy makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
             </p>
           </section>
           
           <section>
             <h2 className="text-2xl font-bold mb-4 tracking-wide">4. Limitations</h2>
             <p className="text-muted-foreground leading-relaxed">
-              In no event shall GRAVITAS INDUSTRIES or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on GRAVITAS INDUSTRIES' website.
+              In no event shall Monogamy or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Monogamy's website.
             </p>
           </section>
           
