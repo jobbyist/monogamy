@@ -64,10 +64,10 @@ const Index = () => {
           <div className="lg:col-span-3">
             <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Ongoing Developments
+            Services & Solutions
           </h2>
           <p className="text-muted-foreground text-lg">
-            Active projects in beta and continuous development
+            Professional digital services tailored for law firms
           </p>
         </div>
 
@@ -89,10 +89,10 @@ const Index = () => {
 
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Upcoming Developments
+            Featured Projects
           </h2>
           <p className="text-muted-foreground text-lg">
-            Next-generation solutions in planning and pre-launch
+            Showcasing innovative digital solutions and partnerships
           </p>
         </div>
 
@@ -141,7 +141,7 @@ const Index = () => {
             </Link>
           </div>
           <p className="text-sm tracking-wide">
-            © {new Date().getFullYear()} GRAVITAS INDUSTRIES. All rights reserved.
+            © {new Date().getFullYear()} Monogamy - Michael Chigbu. All rights reserved.
           </p>
         </div>
       </footer>
